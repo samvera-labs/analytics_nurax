@@ -1,11 +1,12 @@
 GIT
   remote: https://github.com/samvera/hyrax.git
-  revision: 0d39af0518934c1ff0904722b99bfeb5909ea23d
-  branch: v2.1.0.beta2b_qa
+  revision: d7f23842065f7d72013aa97aa5709b13885834b7
+  branch: analytics-sprint
   specs:
     hyrax (2.1.0.beta2)
       active-fedora (~> 11.5, >= 11.5.2)
       almond-rails (~> 0.1)
+      autometal-piwik (>= 1.0.0)
       awesome_nested_set (~> 3.1)
       blacklight (~> 6.14)
       blacklight-gallery (~> 0.7)
@@ -121,6 +122,10 @@ GEM
       io-like (~> 0.3.0)
     arel (8.0.0)
     ast (2.4.0)
+    autometal-piwik (1.0.0)
+      activesupport
+      rest-client
+      xml-simple
     autoprefixer-rails (8.3.0)
       execjs
     awesome_nested_set (3.1.4)
@@ -257,6 +262,8 @@ GEM
     devise-i18n (1.6.1)
       devise (>= 4.4)
     diff-lcs (1.3)
+    domain_name (0.5.20170404)
+      unf (>= 0.0.5, < 1.0.0)
     dropbox_api (0.1.10)
       faraday (~> 0.9, ~> 0.8)
       oauth2 (~> 1.1)
@@ -319,15 +326,15 @@ GEM
       railties (>= 3.2, < 6.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
-    google-api-client (0.20.1)
+    google-api-client (0.19.8)
       addressable (~> 2.5, >= 2.5.1)
       googleauth (>= 0.5, < 0.7.0)
       httpclient (>= 2.8.1, < 3.0)
       mime-types (~> 3.0)
       representable (~> 3.0)
       retriable (>= 2.0, < 4.0)
-    google_drive (2.1.3)
-      google-api-client (>= 0.11.0, < 1.0.0)
+    google_drive (2.1.9)
+      google-api-client (>= 0.11.0, < 0.20.0)
       googleauth (>= 0.5.0, < 1.0.0)
       nokogiri (>= 1.5.3, < 2.0.0)
     googleauth (0.6.2)
@@ -346,6 +353,8 @@ GEM
     hiredis (0.6.1)
     honeybadger (3.3.0)
     htmlentities (4.3.4)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
     http_logger (0.5.1)
     httparty (0.16.2)
       multi_xml (>= 0.5.2)
@@ -513,6 +522,7 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (4.2.0)
+    netrc (0.11.0)
     nio4r (2.3.0)
     noid (0.9.0)
     noid-rails (3.0.0)
@@ -655,6 +665,10 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
+    rest-client (2.0.2)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
     retriable (3.1.1)
     riiif (1.7.0)
       deprecation (>= 1.0.0)
@@ -798,6 +812,9 @@ GEM
     uber (0.1.0)
     uglifier (4.1.8)
       execjs (>= 0.3.0, < 3)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.5)
     unicode-display_width (1.3.0)
     warden (1.2.7)
       rack (>= 1.0)
