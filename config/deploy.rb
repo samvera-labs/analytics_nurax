@@ -2,7 +2,7 @@
 lock "3.9.0"
 
 set :application, "nurax"
-set :repo_url, "https://github.com/curationexperts/nurax.git"
+set :repo_url, "https://github.com/samvera-labs/analytics_nurax.git"
 
 # Default branch is :master
 set :branch, ENV['REVISION'] || ENV['BRANCH'] || ENV['BRANCH_NAME'] || 'master'
